@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+}
+
+.main{
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 50;
+    font-family: 'Segoe UI', sans-serif;
+    
+    
+}
+.header{
+    display: flex;
+    height: 80px;
+    justify-content:space-between;
+    align-items: center;
+    font-family: 'Noto Sans JP', Helvetica, sans-serif;
+    padding: 10px;
+    
+    
+}
+.head{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: white;
+    
+}
+
+.headeroptions{
+    display: flex;
+    gap: 30px;
+    line-height: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.logoimg{
+    width: 200px;
+    height: 90px;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 5px;
+    border-radius: 5px;
+    min-width:80px;
+    height: 40px;
+    color: rgb(27, 10, 110);
+    text-align: center;
+    font-size: 15px;
+    transition-duration: 1s;
+    font-weight: 600;
+    padding: 10px;
+}
+.home:hover{
+    transform:translate(color) ;
+    color: #0650b1;
+
+   
+}
+
+.user{
+    height: 30px;
+    width: 30px;
+}
+.menu_icon{
+    display: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+.footer{
+    background-color: rgba(229, 227, 227, 0.878);
+    padding: 20px;
+}
+
+.footer_top{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.first_section{
+    width: 400px;
+    padding: 10px;
+    margin-top: 20px;
+    
+}
+.first_section a{
+    display: flex;
+    font-size: 13px;
+    gap: 5px;
+    
+}
+.first_section h3{
+    font-weight: 500;
+    color: gray;
+}
+.loc{
+    font-size: 13px;
+}
+.logodiv{
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+    background-color:rgba(229, 227, 227, 0.878);
+    height: 50px;
+}
+.f1{
+    display: flex;
+    align-items: flex-start;
+    
+}
+.footlogo{
+    width: 200px;
+    height: 90px;
+}
+.footerlogos{
+    display: flex;
+    width: 100%;
+
+    /*align-items: flex-start;
+    justify-content: flex-start; */
+}
+.second_section a{
+ display: flex;
+ font-weight: 600;
+ transition-duration: 2s;
+ 
+}
+.second_section a:hover{
+    color: #00b8ff;
+    
+    
+}
+.email_block{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.email_block input{
+    border: none;
+    padding: 10px;
+    border-radius: 7px;
+}
+.submit{
+    width: 100px;
+    color: white;
+    background-color: #00b8ff;
+}
+.third_section{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 550px;
+    margin-top: 20px;
+}
+.buttonarea{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+
+}
+.request{
+    background-color: #00b8ff;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    width: 250px;
+    height: 40px;
+    padding: 10px;
+    
+}
+.career{
+    width: 180px;
+}
+.third_section h3{
+    color: gray;
+}
+
+.register_sec{
+    width: 500px;
+    height: 400px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: absolute;
+    top: 150px;
+    left: 500px;
+    background-image: url("../img/register.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 2px rgb(0, 0, 0);
+}
+.register_sec button{
+    width: 300px;
+    height: 70px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: black;
+    border: 1px solid white;
+
+}
+.register_sec button:hover{
+    background-color: rgba(0, 0, 0, 0.666);
+}
+.fb{
+    width: 300px;
+    height: 50px;
+    border: 1px solid rgb(192, 190, 190);
+    border-radius: 5px;
+
+}

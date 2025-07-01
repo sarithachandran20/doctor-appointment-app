@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+}
+
+.staffregister{
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+}
+.head{
+    position:sticky;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.441);
+}
+.header{
+    display: flex;
+    height: 80px;
+    justify-content:space-around;
+    align-items: center;
+    font-family: 'Noto Sans JP', Helvetica, sans-serif;
+    padding: 20px;
+}
+.logoimg{
+    width: 200px;
+    height: 90px;
+}
+.headeroptions{
+    display: flex;
+    gap: 30px;
+    line-height: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.menu{
+    font-size: 15px;
+    transition-duration: 2s;
+    font-weight: 400;
+}
+.menu:hover{
+    transform:translate(color) ;
+    color: blue;
+}
+.menutxt{
+    font-size: 13px;
+    color: rgb(59, 23, 176);
+    font-weight: 400;
+}
+.user{
+    height: 30px;
+    width: 30px;
+}
+.menu_icon{
+    display: none;
+}
+.header a{
+    text-decoration: none;
+    color: black;
+}

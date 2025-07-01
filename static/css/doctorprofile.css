@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+}
+
+.doctorprofilepage{
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading p{
+    line-height: 8px;
+}
+.heading h3{
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/doctor3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 600px;
+    padding-top: 150px;
+    padding-bottom: 50px;
+
+
+}
+.profile_sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color:black;
+    width: 900px;
+    min-height: 600px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+}
+.edit{
+    width: 250px;
+    height:90px ;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.edit input{
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #00b8ff;
+    color: white;
+    font-weight: 600;
+    border: 1px solid transparent;
+    font-size: 15px;
+}
+
+.profile_pic{
+    width: 100%;
+    min-height: 100px;
+    background-color: white;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.327);
+}
+.username{
+    
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.pic{
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    padding: 10px;
+    
+}
+.p1{
+    background-color: rgba(211, 211, 211, 0.744);
+    padding: 10px;
+}
+.personal_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    
+}
+.profile_title{
+    color: rgb(27, 27, 117);
+}
+.info{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    
+    width: 80%;
+    height: 40px;
+    background-color: rgba(211, 211, 211, 0.301);
+    padding: 10px;
+    
+}
+.info p{
+ margin-top: 10px;
+}
+.history{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba(183, 181, 181, 0.567);
+    width: 100%;
+    padding: 20px;
+    gap: 10px;
+}
+.appointment_list{
+    width: 80%;
+    min-height: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.back{
+    padding: 10px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.back button{
+    padding: 10px;
+    width: 250px;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: rgba(10, 10, 10, 0.945);
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}

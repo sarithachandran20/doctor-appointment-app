@@ -1,0 +1,76 @@
+.content{
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    background-image:linear-gradient( 
+                      rgba(11, 11, 11, 0.181), rgba(100, 183, 238, 0.5)
+                   ),url(../img/doctor3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;  
+    padding: 20px;
+}
+.table_sec{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 20px;
+    width: 100%;
+    min-height:400px ;
+    
+    
+
+
+}
+table{
+    width: 80%;
+    min-height: 300px;
+    text-align: center;
+    border-collapse: collapse;
+    box-shadow: 1px 1px 3px 3px rgb(118, 118, 118);
+    background-color: white;
+    padding: 10px;
+}
+tr{
+    border-bottom: 1px solid gray;
+    padding: 5px;
+    height: 40px;
+    
+}
+.back{
+    width: 20%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.back button{
+
+    width: 180px;
+    height: 90px;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.back button:hover{
+
+    border: 1px solid white;
+    background-color: #0000009f;
+}
+.view{
+    background-color: rgb(30, 106, 239);
+    border: 1px solid transparent;
+    width: 80px;
+    height: 30px;
+    border-radius: 8px;
+    color: white;
+}

@@ -1,0 +1,222 @@
+
+.maincontent{
+    width: 100%;
+    min-height:600px;
+    background-image: url("../img/homebackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Noto Sans JP', Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.content{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  /* padding: 10px 10px 20px 20px; */
+  background-color: #04074448;
+  width: 700px;
+  height: 300px;
+  border-radius: 10px;
+  
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading p{
+    line-height: 8px;
+}
+.heading h3{
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.searchform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.formdiv{
+   display: flex;
+   /* padding: 10px; */
+   gap: 20px;
+   align-items: center;
+   justify-content: center;
+   height: 150px;
+}
+
+.forminput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search{
+    display: flex;
+    gap: 0;
+    justify-content: flex-start;
+    width: 350px;
+}
+.formdiv input{
+    width: 350px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #08399c;
+    font-size: 1rem;
+}
+
+.searchbtn{
+    width: 80px;
+    height: 50px;
+    background-color: #00b8ff;
+    color: white;
+    border-right: 4px;
+    border-radius: 4px;
+    border: none;
+    padding: 5px;
+    margin-bottom: 12px;
+
+    
+}
+.doc_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    min-height: 400px;
+    background-color: #040744;
+    padding-bottom: 30px; 
+}
+.doctorlist{
+    display: flex;
+    width:800px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 2px black;
+    gap: 20px;
+
+}
+.doc_details{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 300px;
+    padding-left: 30px;
+    
+    
+}
+.doc_details a{
+    color: #08399c;
+    border: 1px solid transparent;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.bookbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+}
+.booknow{
+    background-color: #00b8ff;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+
+}
+
+.nofound{
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+.dp{
+    width: 250px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-right: 1px solid lightgray;
+}
+.dp img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+
+
+.login-popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  z-index: 1000;
+  text-align: center;
+  width: 300px;
+}
+
+.login-popup p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.login-link {
+  display: inline-block;
+  background-color: #1976d2;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.login-link:hover {
+  background-color: #155cb0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 18px;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  cursor: pointer;
+}
+
