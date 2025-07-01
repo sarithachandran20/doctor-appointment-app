@@ -1,0 +1,29 @@
+{%extends 'patient_dashboard.html'%}
+{% load static %}
+{% block extra_css%}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{%endblock%}    
+
+
+{%block content%}
+    
+        
+   
+           <div class="login">
+                <form method="post" class="loginform">
+                    {% csrf_token %}
+                        
+                        <h2>Login to your Account</h2><br>
+                        <p><label for="">Username : </label>
+                        <input type="text" placeholder="Username" class="login_input" name="username"></p>
+                        <p><label for="">Password : </label>
+                        <input type="password" placeholder="Password" class="login_input" name="password"></p>
+                        
+                        <input type="submit" value="Login" class="loginbtn">
+            
+                </form>
+        </div>
+   
+        
+{%endblock%}        
+        

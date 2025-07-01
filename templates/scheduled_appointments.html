@@ -1,0 +1,39 @@
+{% extends 'doctor_dashboard.html'%}
+{%load static%}
+{% block extra_css%}
+<link rel="stylesheet" href="{% static 'css/feedbacklist.css'%}">
+{%endblock%}
+{%block content%}
+
+        <div class="feedback">
+            
+                    <h3>Scheduled Appointments</h3>
+                    <table>
+                        <thead>
+                        <tr>
+                            <td>Patient</td>
+                            <td>Booking Date</td>
+                            <td>Description</td>
+                            <td>Status</td>
+                        </tr>
+                        </thead>
+                        {%for i in bookings%}
+                        <tbody>
+                        <tr>
+                            <td>{{i.patient}}</td>
+                            <td>{{i.booking_time}}</td>
+                            <td>{{i.description}}</td>
+                            <td>{{i.booking_status}}</td>
+                        </tr>
+                        </tbody>
+                        {%empty%}
+                         <h3>You have no appointments scheduled at the moment. !</h3>
+                        {%endfor%}
+                    
+                    </table>
+                    
+                    
+             
+        </div>
+                
+{%endblock%}             

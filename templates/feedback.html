@@ -1,0 +1,27 @@
+{% extends 'patient_dashboard.html'%}
+{% load static%}
+{% block extra_css%}
+<link rel="stylesheet" href="{% static 'css/feedback.css'%}">
+{%endblock%}
+{% block content%}
+    <div class="feedback">
+             <h2>Submit Feedback / Complaint</h2>
+            <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {%if request.user.is_authenticated %}
+               <button type="submit" class="submit">Submit</button>
+            {%else%} 
+                <button type="button"  onclick="showLoginMessage()" class="submit">Submit</button>
+            {%endif%}
+            </form>
+
+            <div id="loginMessage" class="login-popup" style="display: none;">
+                                    <p>Please login.</p>
+                                    <a href="{% url 'login' %}" class="login-link">Go to Login</a>
+                                    <button onclick="hideLoginMessage()" class="close-btn">✖</button>
+            </div>
+                                        
+    </div>
+    <script src="{% static 'js/login_message.js'%}"></script>         
+{%endblock%}

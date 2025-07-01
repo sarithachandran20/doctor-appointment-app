@@ -1,0 +1,23 @@
+{%extends 'admin.html'%}
+{%load static %}
+{%block extra_css%}
+   <link rel="stylesheet" href="{% static  'css/aproved_profiles.css' %}">
+{%endblock%}   
+
+{%block content%}
+    <div class="profile_list">
+        {% for i in doc %}
+          <div class="profile">
+                <p>Name : Dr.{{i.doctor}}</p>
+                <p>Specialization : {{i.specilization}}</p>
+                <p>Location : {{i.location}}</p>
+                <p>Phone : {{i.phone}}</p>
+                <p>Gender : {{i.gender}}</p>
+          </div>
+          
+        {% endfor %} 
+        <a href="{%url 'manage_doctors'%}">
+            <button>Back</button>
+        </a>  
+    </div>
+{%endblock%}    

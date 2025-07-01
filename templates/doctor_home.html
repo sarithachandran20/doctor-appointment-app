@@ -1,0 +1,37 @@
+{% extends 'doctor_dashboard.html' %}
+{% load static %}
+
+{%block extra_css%} 
+    <link rel="stylesheet" href="{% static 'css/doctorhome.css' %}">
+{%endblock%}
+
+{%block content%}
+        <div class="bookings">
+            <div class="welcome">
+                <div class="welcome_sec">
+                      <h1>Welcome, Dr.{{request.user}} !</h1>
+                      <p>We're honored to support your work. This Platform is designed to help you
+                        manage your schedule,appointments, and patient care with ease and efficiency.
+                      </p>
+                      {% if doc.profile_status == 'pending' %}
+                           <p class="account">Your account is inactive. Please complete your profile to activate it.
+                             We will activate your account after verifying your information.</p>
+                      {% endif %}
+                </div>
+                <div class="appointments">
+                    <a href="{%url 'manage_appointments'%}">
+                        <button>Manage Appointments</button>
+                    </a>
+                    <a href="{% url 'scheduled_appointments'%}">
+                        <button>scheduled Appointments</button>
+                    </a>
+                </div>
+              
+            </div>
+            
+            
+                
+           </div>
+        </div>     
+{%endblock%}
+    

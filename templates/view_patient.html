@@ -1,0 +1,65 @@
+{%extends 'patient_dashboard.html'%}
+{% load static%}
+    <!-- external css -->
+ {%block extra_css%}    
+    <link rel="stylesheet" href="{% static 'css/doctorprofile.css' %}">
+ {%endblock%}   
+
+ {%block content%}
+             <div class="profile">
+                    <div class="profile_sec">
+                        <div class="profile_pic">
+                          {% if pro.profile_pic%}
+                           <img src="{{pro.profile_pic.url}}" alt="profile picture" class="pic">
+                          {%else%}
+                            <img src="{% static 'img/default.jpg'%}" alt="" class="pic"> 
+                          {%endif%} 
+                           <div class="div">
+                              
+                               <p class="username">{{pro.patient.username}}</p>
+                               <p>id : PA65{{pro.patient.id}}</p>
+                               <p>Registered : {{pro.created}}</p>
+                           </div>
+                           
+                        </div>
+                        <div class="personal_info">
+                             <div class="info">
+                            <p>Phone</p><p>{{pro.phone}}</p>
+                            </div>
+                            <div class="info">
+                            <p>Email</p><p>{{pro.patient.email}}</p>
+                            </div>
+                           <div class="info">
+                            <p>Bio</p><p>{{pro.bio}}</p>
+                          </div>
+                           <div class="info">
+                            <p>Age</p><p>{{pro.age}}</p>
+                          </div>
+                          <div class="info">
+                            <p>Gender</p><p>{{pro.gender}}</p>
+                            </div>
+                          <div class="info">
+                            <p>Blood</p><p>{{pro.blood}}</p>
+                         </div>
+ 
+                        <!-- <div class="edit">
+                             <a href="{% url 'edit_patientprofile' %}">
+                           <input type="button" value="Edit Profile">
+                        </a>
+                        </div> -->
+                                              
+                        
+                        </div>
+                        <div class="history">
+                           
+                           <div class="back">
+                              <a href="{%url 'manage_patients'%}">
+                               <button>Back</button>
+                              </a>
+                           </div>
+                           
+                        </div>
+                    </div>
+            </div>
+{%endblock%}            
+           

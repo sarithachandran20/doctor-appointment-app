@@ -1,0 +1,40 @@
+{%extends 'admin.html' %}
+{%load static%}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/all_patients.css' %}">
+{%endblock%}
+
+{%block content %}
+<div class="content">
+    <div class="table_sec">
+        <table>
+            
+            <tr>
+                <td>Booking id</td>
+                <td>Patient</td>
+                <td>Doctor</td>
+                <td>Booking Date</td>
+                <td>Booking Status</td>
+                <td>Description</td>
+            </tr>
+            {%for i in appointments %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.patient}}</td>
+                <td>{{i.doctor}}</td>
+                <td>{{i.booking_time}}</td>
+                <td>{{i.booking_status}}</td>
+                <td>{{i.description}}</td>
+                
+            </tr>
+            {%endfor%}
+        </table>
+        <div class="back">
+              <a href="{% url 'admin_dashboard'%}">
+                <button>Back</button>
+        </a>
+        </div>
+        
+    </div>
+</div>
+{%endblock%}

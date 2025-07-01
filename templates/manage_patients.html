@@ -1,0 +1,48 @@
+{%extends 'admin.html' %}
+{%load static%}
+{%block extra_css%}
+<link rel="stylesheet" href="{% static 'css/all_patients.css' %}">
+{%endblock%}
+
+{% block content %}
+    <div class="content">
+       
+        <div class="table_sec">
+            <table>
+                <tr> 
+                    <td>Patient id</td>
+                    <td>Name</td>
+                    <td>Phone</td>
+                    <td>Age</td>
+                    <td>Gender</td>
+                    <td>Profile</td>
+                    
+                </tr>
+                    {%for i in patients%}
+                    <tr>
+                        <td>{{i.id}}</td>
+                        <td>{{i.patient}}</td>
+                        <td>{{i.phone}}</td>
+                        <td>{{i.age}}</td>
+                        <td>{{i.gender}}</td>
+                        <td><a href="{% url 'view_patient' i.id %}"><button class="view">view</button></a></td>
+                        <td>
+                             <a href="{% url 'delete_patient' i.id %}" 
+                              onclick="return confirm('Are you sure you want to delete the patient {{i.patient}}?');">
+                                🗑️ Delete
+                            </a>
+                        </td>
+                        
+                    </tr>
+                    {%endfor%}
+            </table>
+            <div class="back">
+                 <a href="{% url 'admin_dashboard'%}">
+                <button>Back</button>
+            </a>
+            </div>
+        </div>
+        
+        
+    </div>
+{%endblock%}

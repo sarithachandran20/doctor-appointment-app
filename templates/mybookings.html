@@ -1,0 +1,43 @@
+{% extends 'patient_dashboard.html'%}
+{% load static %}
+{% block extra_css%}
+    <link rel="stylesheet" href="{% static 'css/mybookings.css' %}">
+{%endblock%}    
+
+    
+
+  {%block content%}  
+        
+        <div class="booking_sec">
+             <h2>Your Bookings</h2>
+
+            <div class="bookinglist">
+                <table>
+                    <thead>
+                        <tr>
+                             <td>Patient</td>
+                             <td>Doctor</td>
+                             <td>Description</td>
+                             <td>Appointment Date</td>
+                             <td>Status</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in bookings%}
+                         <tr>
+                            <td>{{i.patient}}</td>
+                             <td>Dr.{{i.doctor}}</td>
+                             <td>{{i.description}}</td>
+                             <td>{{i.booking_time}}</td>
+                             <td>{{i.booking_status}}</td>
+                         </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
+                
+
+            </div>
+        </div>
+           
+  {%endblock%}      
+    

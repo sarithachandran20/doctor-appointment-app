@@ -1,0 +1,82 @@
+{% extends 'patient_dashboard.html'%}
+{% load static %}
+{% block extra_css%}
+    <link rel="stylesheet" href="{% static 'css/appointment.css' %}">
+{%endblock%}    
+
+    {% block content%}
+
+            <div class="maincontent">
+                    <div class="title_sec">
+                        <h5>TAKING APPOINTMENTS MADE EASY</h5>
+                        <p class="p1">Scheduling automation you and your invitees will actually enjoy.</p>
+                    </div>
+                    <div class="appointment_sec">
+                        <a href="{% url 'mybookings' %}">
+                            <div class="confirm"><p>Confirmed Appointment</p></div>
+                        </a>
+                         <div class="description">
+                            <img src="{% static 'img/BOOKNMEET-SECURE-MOBILE-SYSTEM-01.svg' %}" alt="">
+                            <div class="parag_sec">
+                                <p class="p2">BOOKADoc customers can maintain their user / clients data and authorizations for the BOOKADoc 
+                                    online mobile appointment scheduling platform.<br><br>
+
+                                    BOOKADoc only creates / confirm affiliates the first time for new customers of the BOOKADoc
+                                     online mobile appointment scheduling platform. These users will receive an email containing 
+                                     their user ID and initial / default [system generated] password. Note that for security 
+                                     reasons, BOOKADoc is not entitled to create and/or administrate additional BOOKADoc online
+                                      mobile appointment scheduling platform users for customers after this initial stage.
+                                </p>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="search_criteria">
+                        <div class="list_content">
+                            <p class="p2">Several search criteria are available to find the users that the department needs to be 
+                                maintained or reassigned to a new department / consultation / speciality:
+                            </p>
+                            <ul class="p2">
+                                <li>Find users by department / speciality / location</li>
+                                <li>Find users by name / business / entity / location</li>
+                                <li>Find users by service / location / state</li>
+                                
+                            </ul>
+                        </div>
+
+                        <div class="list_content">
+                            <p class="p2">The search criteria to find users by service offer three options:</p>
+                            <ul class="p2">
+                                <li>Any — search only for users who have any authorizations</li>
+                                <li>Select search criteria — search only for users who have certain authorizations (listed varified entities)</li>
+                                <li>When you select the Select search criteria option, you can search for users with specialities, practice location and location.</li>
+                                
+                            </ul>
+                       </div>
+
+                        <div class="list_content">
+                            <p class="p2">Several search criteria are available to find the users that need to be maintained:</p>
+                            <ul class="p2">
+                                <li>Find users by department</li>
+                                <li>Find users by specialities / name</li>
+                                <li>Find users by services </li>
+                                
+                            </ul>
+                        </div>
+
+                        <p class="p2">Super administrators are first users of a affliate with maximum authorizations. BOOKADoc 
+                            recommends that you create at least two additional super administrators who can support you or substitute 
+                            for you if needed. Only super administrators can assign/remove all authorizations from other users / 
+                            consultants, since they have all authorizations assigned at the highest possible authorization level. Note
+                            that a user administrator cannot administrate himself. A change to his authorizations can only be made by
+                            another super administrators or BOOKADoc..
+                        </p>
+                    </div>
+
+            </div>
+    {%endblock%}        
+
+           
+    
+            
+
+      

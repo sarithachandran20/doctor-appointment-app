@@ -1,0 +1,70 @@
+{%extends 'admin.html' %}
+{% load static %}
+{%block extra_css%}
+    <link rel="stylesheet" href="{% static 'css/admin_dashboard.css' %}">
+{%endblock%}    
+{%block content %}
+       <div class="adminpage">
+             
+           <div class="aprove_sec">
+                
+                <div class="sidebar">
+                   
+                    <a href="{%url 'manage_doctors'%}">
+                         <div class="sidebar_options">
+                          <p>Manage Doctors</p>
+                         </div>
+                    </a>
+                    <a href="{% url 'manage_patients'%}">
+                         <div class="sidebar_options">
+                          <p>Manage Patients</p>
+                         </div>
+                    </a>
+                  
+                   
+                   <a href="{%url 'manage_all_appointments'%}">
+                        <div class="sidebar_options">
+                        <p>Manage Appointments</p>
+                        </div>
+                   </a>
+                   <a href="{%url 'feedback_list'%}">
+                        <div class="sidebar_options">
+                        <p>Feedbacks/Complaints</p>
+                        </div>
+                   </a>
+                   
+                   
+                   
+                   
+                   
+                </div>
+                <div class="content_sec">
+                     <h1>Welcome to Your Admin Panel !</h1> 
+                     <div class="buttons">
+                    
+                          <a href="{% url 'alldoctors' %}">
+                            <div class="d1">
+                                 <p>Doctors</p>
+                                 <p>{{doctor_count}}</p> 
+                            </div>
+                          </a>
+                          <a href="{% url 'allpatients'%}">
+                            <div class="d2 d1">
+                                <p>Patience</p>
+                                <p>{{patient_count}}</p>
+                           </div>
+                          </a>
+                          <a href="{% url 'all_appointments' %}">
+                            <div class="d3 d1">  
+                              <p>Appointments</p>
+                              <p>{{appointment_count}}</p> 
+                          </div>
+                          </a>
+                          
+                     </div> 
+                    
+                </div>
+                
+           </div>
+{%endblock%}              
+            

@@ -1,0 +1,156 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+    <div class="adminpage">
+         <nav class="navbar navbar-expand-lg bg-body-tertiary head">
+            <div class="container-fluid header">
+                <div class="logo">
+                    <a href="{% url 'admin_dashboard' %}"><img src="{% static 'img/BookAD.png' %}" class="logoimg"></a>
+                </div>
+                <div class="headeroptions">
+                    <a href="{%url 'admin_dashboard'%}">
+                    <div class="mobileapp home">
+                       Home
+                    </div></a>   
+                    {% if request.user.is_authenticated %}
+                        
+                    <a href="{%url 'logout'%}">
+                    <div class="mobileapp home">
+                       log out 
+                    </div></a>
+                     
+                
+                        <div class="mobileapp home">
+                        {{request.user}}
+                         </div>
+                    
+
+                    
+
+                    {%endif%}
+
+                    
+                    
+                </div>
+            </div>
+         </nav>
+                
+        {%block content%}
+        {%endblock%}
+                  
+               
+         
+         
+    
+
+            <div class="footer container-fluid">
+                    <div class="footer_top container-fluid">
+                        <div class="first_section">
+                            
+                            <h3>Online Appointment Scheduling Platform</h3>
+                            <a href="#">
+                            <span class="material-symbols-outlined loc">
+                                    location_on
+                                </span>
+                                <p>Nasscom Startup Warehouse, Infopark Campus, Kakkanad, Kerala, India</p></a>
+                            <a href=""><p>post@booknmeet.com</p></a>
+                            <h3>FOLLOW US</h3>
+                        
+                        
+                        
+                            <footer class="text-center bg-body-tertiary f1">
+                                <!-- Grid container -->
+                                <div class="container pt-4 logodiv">
+                                <!-- Section: Social media -->
+                                <section class="mb-4 footerlogos">
+                                    <!-- Facebook -->
+                                    <a
+                                    data-mdb-ripple-init
+                                    class="btn btn-link btn-floating btn-lg text-body m-1"
+                                    href="#!"
+                                    role="button"
+                                    data-mdb-ripple-color="dark"
+                                    ><i class="fab fa-facebook-f icons"></i
+                                    ></a>
+                            
+                                    <!-- Twitter -->
+                                    <a
+                                    data-mdb-ripple-init
+                                    class="btn btn-link btn-floating btn-lg text-body m-1"
+                                    href="#!"
+                                    role="button"
+                                    data-mdb-ripple-color="dark"
+                                    ><i class="fab fa-twitter"></i
+                                    ></a>
+                            
+                                    <!-- Google -->
+                                    <a
+                                    data-mdb-ripple-init
+                                    class="btn btn-link btn-floating btn-lg text-body m-1"
+                                    href="#!"
+                                    role="button"
+                                    data-mdb-ripple-color="dark"
+                                    ><i class="fab fa-google"></i
+                                    ></a>
+                            
+                                    <!-- Instagram -->
+                                    <a
+                                    data-mdb-ripple-init
+                                    class="btn btn-link btn-floating btn-lg text-body m-1"
+                                    href="#!"
+                                    role="button"
+                                    data-mdb-ripple-color="dark"
+                                    ><i class="fab fa-instagram"></i
+                                    ></a>
+                            
+                                    <!-- Linkedin -->
+                                    <a
+                                    data-mdb-ripple-init
+                                    class="btn btn-link btn-floating btn-lg text-body m-1"
+                                    href="#!"
+                                    role="button"
+                                    data-mdb-ripple-color="dark"
+                                    ><i class="fab fa-linkedin"></i
+                                    ></a>
+                                    <!-- Github -->
+                                    <a
+                                    data-mdb-ripple-init
+                                    class="btn btn-link btn-floating btn-lg text-body m-1"
+                                    href="#!"
+                                    role="button"
+                                    data-mdb-ripple-color="dark"
+                                    ><i class="fab fa-github"></i
+                                    ></a>
+                                </section>
+                                <!-- Section: Social media -->
+                                </div>
+                                
+                                <!-- Grid container -->
+                            </footer>
+                        </div>  
+                        
+                        <div class="third_section ">
+                            
+                            <h3>Your guaranteed Mobile Online Appointment</h3>
+                            <p>With BOOKADoc productivity tool, be successful in avoiding unscheduled absences.
+                                let our tool support you to be a leader in your medical practice. The best online appointment scheduling Platform enhances
+                                your practice management with online profile visibility.</p>
+                        </div>
+                    </div>
+                    <div class="footer_bottom container-fluid"></div>
+
+            </div>
+    </div>
+    
+</body>
+
+</html>

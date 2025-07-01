@@ -1,0 +1,27 @@
+{%extends 'patient_dashboard.html' %}
+{% load static %}
+{% block extra_css%}
+      <link rel="stylesheet" href="{% static 'css/register.css' %}">
+{%endblock%}  
+
+{% block content %}
+        <div class="maincontent">
+             <div class="title_sec">
+                    <h2>Staff Registration</h2>
+             </div>
+                    
+             
+            
+             <form method="post" class="staff">
+             {% csrf_token %}
+             <div class="inputs">
+                  
+                   {{ form.as_p }}
+
+                   <input type="submit" value="Register" class="register">
+             </div>
+             
+            </form>
+        </div>
+{%endblock%}
+

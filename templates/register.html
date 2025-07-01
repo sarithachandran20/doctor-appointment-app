@@ -1,0 +1,23 @@
+{%extends 'patient_dashboard.html'%}
+{% load static %}
+{%block extra_css%}
+      <link rel="stylesheet" href="{% static 'css/register.css' %}">
+{%endblock%}      
+  
+{%block content%}
+          <div class="maincontent">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="title_sec">
+                        <h2>Registering with BOOKADoc is now one step easy.  Lets Collaborate !!</h2>
+                    </div>
+                     <div class="inputs"> 
+                            {{form.as_p}}
+                            <input type="submit" value="Register" class="register">
+                     </div>
+                </form>
+          </div>
+ {%endblock%}         
+
+    
+

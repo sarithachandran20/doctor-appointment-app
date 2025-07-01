@@ -1,0 +1,91 @@
+{% extends 'patient_dashboard.html'%}
+{% load static %}
+
+    {%block extra_css%}
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+    {%endblock%}
+
+   {%block content%}
+         <div class="maincontent">
+            <!-- <div class="empty">
+               <p></p>
+            </div> -->
+            <div class="heading_sec">
+                <h1>Wolcome to BookADoc !</h1>
+                <p>At BookADoc, booking a doctor’s appointment is just a click away. Whether you're a patient seeking timely care,
+                   a doctor managing your schedule, or an admin ensuring smooth operations — we've built a platform to make healthcare 
+                   easy, fast, and efficient for everyone.<br>
+                   Explore our features, connect with professionals, and take control of your health today!
+                </p>
+            </div>
+            <div class="department_sec">
+                    <h2>Specialization</h2>
+                    <div class="departments">
+                           <a href="{% url 'search_doctors' 'cardiologist' %}">
+                        <div class="specialization">
+                            <img src="{% static 'img/cardiology.jpg'%}">
+                            <p>Cardiologist</p>
+                        </div>
+                    </a>
+                    <a href="{% url 'search_doctors' 'dentist' %}">
+                        <div class="specialization">
+                            <img src="{% static 'img/dental.jpg'%}">
+                            <p>Dentist</p>
+                        </div>
+                    </a>
+                    <a href="{% url 'search_doctors' 'orthopedist' %}">
+                        <div class="specialization">
+                            <img src="{% static 'img/ortho.jpg'%}">
+                            <p>Orthopedist</p>
+                        </div>
+                    </a>
+                    <a href="{% url 'search_doctors' 'pediatrics' %}">
+                        <div class="specialization">
+                            <img src="{% static 'img/Pediatrics.jpg'%}">
+                            <p>Pediatrics</p>
+                        </div>
+                    </a>
+                    <a href="{% url 'search_doctors' 'otolaryngologist' %}">
+                        <div class="specialization">
+                            <img src="{% static 'img/otolaryngologist.jpg'%}">
+                            <p>Otolaryngologist</p>
+                        </div>
+                    </a>
+                    <a href="{% url 'search_doctors' 'ophthalmologist' %}">
+                        <div class="specialization">
+                            <img src="{% static 'img/ophthalmologist.jpg'%}">
+                            <p>Ophthalmologist</p>
+                        </div>
+                    </a>
+                    <a href="{% url 'search_doctors' 'gynecologist' %}">
+                        <div class="specialization">
+                            <img src="{% static 'img/Gynecologist.jpg'%}">
+                            <p>Gynecologist</p>
+                        </div>
+                    </a>
+                    <a href="{% url 'search_doctors' 'dermatologist' %}">
+                        <div class="specialization">
+                            <img src="{% static 'img/dermatologist.jpg'%}">
+                            <p>Dermatologist</p>
+                        </div>
+                    </a>
+                    <a href="{% url 'search_doctors' 'neurologist' %}">
+                        <div class="specialization">
+                            <img src="{% static 'img/neurologist.jpg'%}">
+                            <p>Neurologist</p>
+                        </div>
+                    </a>
+                    <a href="{% url 'search_doctors' 'psychiatrist' %}">
+                        <div class="specialization">
+                            <img src="{% static 'img/psychiatrist.jpg'%}">
+                            <p>Psychiatrist</p>
+                        </div>
+                    </a>
+                    </div>
+            </div>
+         </div>
+
+   {%endblock%}        
+        
+            
+    

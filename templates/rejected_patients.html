@@ -1,0 +1,26 @@
+{%extends 'admin.html'%}
+{%load static %}
+{%block extra_css%}
+<link rel="stylesheet" href="{% static 'css/aproved_profiles.css' %}">
+{%endblock%}
+
+{% block content %}
+         <div class="profile_list">
+        {% for i in patients %}
+          <div class="profile">
+                 <p>Patient : {{i.patient}}</p>
+                <p>Doctor : Dr.{{i.doctor}}</p>
+                <p>Description : {{i.description}}</p>
+                <p>Booking time : {{i.booking_time}}</p>
+                <p>Booking Status : {{i.booking_status}}</p>
+                
+          </div>
+          {%empty%}
+          <h3>No Rejected patients available !</h3>
+        {% endfor %} 
+
+        <a href="{%url 'admin_dashboard'%}">
+            <button>Back</button>
+        </a>  
+    </div>
+{%endblock%}

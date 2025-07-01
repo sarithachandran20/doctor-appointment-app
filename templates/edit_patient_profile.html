@@ -1,0 +1,51 @@
+{%extends 'patient_dashboard.html'%}
+{% load static %}
+{%block extra_css%}
+<link rel="stylesheet" href="{% static 'css/editdoctor.css' %}">
+{%endblock%}
+
+        {%block content%}   
+            <div class="doctorprofile">
+                
+                <h2>Edit Profile</h2>
+                <form method="post" class="profileform" enctype="multipart/form-data">
+                    {% csrf_token %}
+                     <div class="form-pic">
+                        {{form.profile_pic}}
+                     </div>
+                     <div class="first_sec">
+                             <p>personal informations</p>
+                             <div class="personal_info">
+                                <div class="form-left">
+                                <div class="form-input">
+                                    <label for="">Phone :</label>{{form.phone}}
+                                </div>
+                                
+                                <div class="form-input">
+                                    <label for="">Bio :</label>{{form.bio}}
+                                </div>
+
+                            </div>
+                            <div class="form-left">
+                                <div class="form-input">
+                                    <label for="">Email :</label><input type="text" value="{{pro.patient.email}}">
+                                </div>
+                                <div class="form-input">
+                                    <label for="">Age :</label>{{form.age}}
+                                </div>
+                                <div class="form-input">
+                                    <label for="">Gender :</label>{{form.gender}}
+                                </div>
+                                 <div class="form-input">
+                                    <label for="">Blood Group :</label>{{form.blood}}
+                                </div>
+                            </div>
+                             </div>
+                            
+                     </div>
+                                         <button type="submit" class="update">Update</button>
+                </form>
+            </div>
+            
+      {%endblock%}
+        

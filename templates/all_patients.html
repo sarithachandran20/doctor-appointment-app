@@ -1,0 +1,42 @@
+{%extends 'admin.html' %}
+{%load static%}
+{%block extra_css%}
+<link rel="stylesheet" href="{% static 'css/all_patients.css' %}">
+{%endblock%}
+
+{% block content %}
+    <div class="content">
+       
+        <div class="table_sec">
+            <table>
+                <tr> 
+                    <td>Patient id</td>
+                    <td>Name</td>
+                    <td>Phone</td>
+                    <td>Age</td>
+                    <td>Gender</td>
+                    
+                    
+                </tr>
+                    {%for i in patients%}
+                    <tr>
+                        <td>{{i.id}}</td>
+                        <td>{{i.patient}}</td>
+                        <td>{{i.phone}}</td>
+                        <td>{{i.age}}</td>
+                        <td>{{i.gender}}</td>
+                        
+                        
+                    </tr>
+                    {%endfor%}
+            </table>
+            <div class="back">
+                 <a href="{% url 'admin_dashboard'%}">
+                <button>Back</button>
+            </a>
+            </div>
+        </div>
+        
+        
+    </div>
+{%endblock%}

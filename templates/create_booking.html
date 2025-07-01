@@ -1,0 +1,48 @@
+{% extends 'patient_dashboard.html'%}
+{% load static %}
+    <!-- external css -->
+     {% block extra_css%}
+    <link rel="stylesheet" href="{% static 'css/createbooking.css' %}">
+    {%endblock%}
+
+        {% block content%}
+        <div class="createbooking">
+            <div class="bookingform">
+                 <h3>Create Appointment</h3>
+                 <form method="post" class="book">
+                    {%csrf_token%}
+                    <div class="appointment">
+                        <div class="booking_sec">
+                            <div class="form-input">
+                                <label for="">Name :</label>
+                                {{form.Name}}
+                            </div>
+                            <div class="form-input">
+                                <label for="">Phone :</label>
+                                <input type="text" value="{{pro.phone}}" readonly>
+                            </div>
+                            <div class="form-input">
+                                <label for="">Email :</label>
+                                <input type="text" value="{{pro.patient.email}}" readonly>
+                            </div>
+                        </div>
+                        <div class="booking_sec">
+                            <div class="form-input">
+                            <label for="">Booking Date :</label>
+                            {{form.booking_time}}
+                            </div>
+                            <div class="form-input">
+                            <label for="">Description :</label>
+                            {{form.description}}
+                            </div>
+
+                        </div>
+                    
+                    </div>
+                    
+                    <input type="submit" value="Book" class="bookbutton">
+                </form>
+            </div>
+            
+        </div>
+    {%endblock%}    

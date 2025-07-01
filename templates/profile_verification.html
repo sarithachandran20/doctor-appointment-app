@@ -1,0 +1,35 @@
+{% extends 'admin.html'%}
+{%load static%}
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/profile_verification.css' %}">
+{%endblock%}
+
+{% block content %} 
+    <div class="content">
+          {% for i in doc %} 
+            <div class="doctors">
+                <div class="d1">
+                   <p>Dr.{{i.doctor}}</p>
+                   <p>{{i.specilization}}</p>
+                   <p>{{i.location}}</p>
+                </div>
+                
+                <div class="buttons">
+                    <a href="{% url 'aprove_profile' i.id %}">
+                       <input type="submit" value="Aprove">
+                    </a>
+                    <a href="{% url 'reject_profile' i.id %}">
+                       <input type="submit" value="Reject">
+                    </a>
+                </div>
+                
+            </div>
+            {%empty%}
+                <h2>No doctors profiles available.!</h2>
+          {%endfor%}
+          <a href="{% url 'manage_doctors' %}">
+            <button>Back</button>
+          </a>
+    </div>       
+        
+{%endblock%}        

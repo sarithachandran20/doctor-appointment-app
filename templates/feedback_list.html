@@ -1,0 +1,38 @@
+{% extends 'admin_dashboard.html'%}
+{% load static%}
+{% block extra_css%}
+<link rel="stylesheet" href="{% static 'css/feedbacklist.css'%}">
+{%endblock%}
+{% block content%}   
+    <div class="feedback">
+            <h2>All Feedbacks & Complaints</h2>
+            <table>
+            <thead>
+                <tr>
+                <th>User</th>
+                <th>Type</th>
+                <th>Message</th>
+                <th>Date</th>
+                <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for fb in feedbacks %}
+                <tr>
+                <td>{{ fb.user.username }}</td>
+                <td>{{ fb.get_feedback_type_display }}</td>
+                <td>{{ fb.message }}</td>
+                <td>{{ fb.submitted_at }}</td>
+                
+                {% if fb.is_resolved%}
+                <td class="status-resolved">Resolved</td>
+                {%else%}
+                <td class="status-pending">Pending</td>
+                {%endif%}
+            
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+    </div>
+{%endblock%}    

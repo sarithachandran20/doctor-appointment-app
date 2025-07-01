@@ -1,0 +1,37 @@
+{% extends 'admin.html'%}
+{%load static%}
+{% block extra_css%}
+<link rel="stylesheet" href="{% static 'css/manage_doctors.css'%}">
+{%endblock%}
+
+{% block content %}
+         <div class="manage_doctors">
+            <div class="title_sec">
+                <h1>Manage Doctors</h1>
+            </div>
+            <div class="options">
+                <div class="left right">
+                    <a href="{% url 'profile_verification'%}">
+                        <button>Profile Verification</button>
+                    </a>
+                    <a href="{% url 'rejected_profiles'%}">
+                        <button>Rejected Profiles</button>
+                    </a>
+                </div>
+                <div class="right">
+                    <a href="{% url 'aproved_profiles'%}">
+                        <button>Verified Profiles</button>
+                    </a>
+                    <a href="{%url 'doctors_list'%}">
+                        <button>Delete Doctor</button>
+                    </a>
+                </div>
+            </div>
+            <div class="back">
+                  <a href="{%url 'admin_dashboard'%}">
+                <button>Back</button>
+            </a>
+            </div>
+           
+         </div>
+{%endblock%}

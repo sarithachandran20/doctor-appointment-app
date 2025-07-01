@@ -1,0 +1,31 @@
+{% extends 'doctor_dashboard.html'%}
+{%load static%}
+{% block extra_css%}
+<link rel="stylesheet" href="{% static 'css/manage_appointment.css'%}">
+{%endblock%}
+{%block content%}
+
+        <div class="bookings">
+            <div class="all">
+                 <h2>All Bookings</h2>
+                <div class="d2">
+                     {%for i in bookings%}
+                     <div class="book" >
+                        <p>patient :{{i.patient}}</p>
+                        <p>date {{i.booking_time}}</p>
+                        <p>reason : {{i.description}}</p>
+                
+                        <br>
+                        <div class="buttons">
+                            <a href="{% url 'aprove_booking' i.id%}"><button class="accept">accept</button></a>
+                            <a href="{% url 'reject_booking' i.id%}"><button class="accept">reject</button></a>
+                        </div>
+                    
+                </div>
+                {%empty%}
+                <h3>You have no appointments at the moment. !</h3>
+                {%endfor%}
+             </div>
+        </div>
+                
+{%endblock%}             

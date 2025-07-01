@@ -1,0 +1,88 @@
+{% extends 'doctor_dashboard.html'%}
+{% load static %}
+
+    <!-- external css -->
+{%block extra_css%}     
+    <link rel="stylesheet" href="{% static 'css/editdoctor.css' %}">
+{%endblock%}
+
+      {%block content%}
+            <div class="doctorprofile">
+               
+                <h2>Edit Profile</h2>
+                <form method="post" class="profileform" enctype="multipart/form-data">
+                    {% csrf_token %}
+                     <div class="form-pic">
+                        {{form.profile_pic}}
+                     </div>
+                     
+                     <div class="first_sec">
+                             <p>Personal Informations</p>
+                             <div class="personal_info">
+                                 <div class="form-left">
+                                
+                                    <div class="form-input">
+                                        <label for="">Full Name :</label>{{form.full_name}}
+                                    </div>
+                                    
+                                    
+                                    <div class="form-input">
+                                        <label for="">Bio :</label>{{form.bio}}
+                                    </div>
+
+                             </div>
+                            <div class="form-left">
+
+                                <div class="form-input">
+                                    <label for="">Phone :</label>{{form.phone}}
+                                </div>
+                                <div class="form-input">
+                                    <label for="">Email :</label><input type="text" value="{{pro.doctor.email}}">
+                                </div>
+                                
+                                <div class="form-input">
+                                    <label for="">Gender :</label>{{form.gender}}
+                                </div>
+                                 <div class="form-input">
+                                    <label for="">Location :</label>{{form.location}}
+                                </div>
+                                 
+
+                            </div>
+                        </div>
+                            
+                     </div>
+                     <div class="first_sec">
+                        <p>Clinic & Professional Details</p>
+                        <div class="personal_info">
+                            <div class="form_left">
+                                 <div class="form-input">
+                                    <label for="">Clinic Name :</label>{{form.clinic_name}}
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="">Clinic Address :</label>{{form.clinic_address}}
+                                 </div>
+                            </div>
+                            <div class="form_left">
+                                <div class="form-input">
+                                    <label for="">Qualifications :</label>{{form.qualifications}}
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="">Specialization :</label>{{form.specilization}}
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="">Consultation Fee :</label>{{form.consultation_fee}}
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="">Consultation days :</label>{{form.consultation_days}}
+                                 </div>
+                            </div>
+        
+                        </div>
+
+                     </div>
+                     <button type="submit" class="update">Update</button>
+                </form>
+            </div>
+ 
+      {%endblock%}     

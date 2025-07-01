@@ -1,0 +1,89 @@
+{% extends 'doctor_dashboard.html'%}
+{% load static %}
+{%block extra_css%}     
+    <link rel="stylesheet" href="{% static 'css/doctorprofile.css' %}">
+{%endblock%}
+       {% block content%} 
+         <div class="profile">
+                    <div class="profile_sec">
+                        <div class="profile_pic">
+                          {% if pro.profile_pic%}
+                           <img src="{{pro.profile_pic.url}}" alt="profile picture" class="pic">
+                          {%else%}
+                            <img src="{% static 'img/default.jpg'%}" alt="" class="pic"> 
+                          {%endif%} 
+                           <div class="div">
+                              
+                               <p class="username">Dr.{{pro.doctor.username}}</p>
+                               <p>id : DC80{{pro.doctor.id}}</p>
+                               <p>Registered : {{pro.created}}</p>
+                           </div>
+                           
+                        </div>
+                        <div class="personal_info">
+                           <p class="profile_title">Personal Informations</p>
+                            <div class="info">
+                            <p>Full Name</p><p>{{pro.fullname}}</p>
+                             </div>
+                             <div class="info">
+                            <p>Phone</p><p>{{pro.phone}}</p>
+                            </div>
+                            <div class="info">
+                            <p>Email</p><p>{{pro.doctor.email}}</p>
+                            </div>
+                           <div class="info">
+                            <p>Bio</p><p>{{pro.bio}}</p>
+                          </div>
+                          <div class="info">
+                               <p>Gender</p><p>{{pro.gender}}</p>
+                          </div>                         
+                         <div class="info">
+                            <p>Location</p><p>{{pro.location}}</p>
+                         </div>
+                         <p>Clinic & Profesional Details</p>
+                         <div class="info">
+                            <p>Specialization</p><p>{{pro.specilization}}</p>
+                          </div>
+                          
+                          <div class="info">
+                            <p>Qualifications</p><p>{{pro.qualifications}}</p>
+                            </div>
+                          
+                         <div class="info">
+                            <p>Clinic</p><p>{{pro.clinic_name}}</p>
+                         </div>
+                         <div class="info">
+                            <p>Address</p><p>{{pro.clinic_address}}</p>
+                         </div>
+                         <div class="info">
+                            <p>Consultation Days</p><p>{{pro.consultation_days}}</p>
+                         </div>
+                         <div class="info">
+                            <p>Consultation Fee</p><p>{{pro.consultation_fee}}</p>
+                         </div>
+ 
+                        <div class="edit">
+                             <a href="{% url 'edit_doctor_profile' %}">
+                           <input type="button" value="Edit Profile">
+                        </a>
+                        </div>
+                                              
+                        
+                    </div>
+                        <div class="history">
+                           <h4>Appointment History</h4>
+                           <div class="appointment_list">
+                              <ul>
+                                 {% for i in booking %}
+                                 <li>{{i.booking_time}} - {{i.patient}} | {{i.booking_status}}</li>
+                                 {%empty%}
+                                 <p>you have no appointments</p>
+                                 {%endfor%}
+                              </ul>
+                           </div>
+                        </div>
+                    </div>
+            </div>
+
+       {%endblock%}  
+         
